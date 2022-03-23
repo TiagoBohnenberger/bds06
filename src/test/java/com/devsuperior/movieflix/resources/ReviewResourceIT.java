@@ -1,4 +1,4 @@
-package com.devsuperior.movieflix.controllers;
+package com.devsuperior.movieflix.resources;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
@@ -51,7 +51,7 @@ public class ReviewResourceIT {
 
 		ReviewDTO reviewDTO = new ReviewDTO();
 		reviewDTO.setText("Gostei do filme!");
-		reviewDTO.setMovieId(1L);
+		reviewDTO.setId(1L);
 
 		String jsonBody = objectMapper.writeValueAsString(reviewDTO);
 		
@@ -71,7 +71,7 @@ public class ReviewResourceIT {
 		
 		ReviewDTO reviewDTO = new ReviewDTO();
 		reviewDTO.setText("Gostei do filme!");
-		reviewDTO.setMovieId(1L);
+		reviewDTO.setId(1L);
 
 		String jsonBody = objectMapper.writeValueAsString(reviewDTO);
 		
@@ -95,7 +95,7 @@ public class ReviewResourceIT {
 		
 		ReviewDTO reviewDTO = new ReviewDTO();
 		reviewDTO.setText(reviewText);
-		reviewDTO.setMovieId(movieId);
+		reviewDTO.setId(movieId);
 
 		String jsonBody = objectMapper.writeValueAsString(reviewDTO);
 		
@@ -125,7 +125,7 @@ public class ReviewResourceIT {
 		
 		ReviewDTO reviewDTO = new ReviewDTO();
 		reviewDTO.setText("        ");
-		reviewDTO.setMovieId(1L);
+		reviewDTO.setId(1L);
 
 		String jsonBody = objectMapper.writeValueAsString(reviewDTO);
 
